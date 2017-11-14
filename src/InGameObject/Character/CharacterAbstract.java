@@ -2,13 +2,17 @@ package InGameObject.Character;
 
 import Client.Board;
 import Client.Game;
-import InGameObject.AnimatedTileAbstract;
 import Graphics.Screen;
+import InGameObject.AnimatedTileAbstract;
 
 public abstract class CharacterAbstract extends AnimatedTileAbstract {
 
 	protected Board _board;
 	protected int _direction = -1;
+	public final int UP = 0;
+	public final int RIGHT = 1;
+	public final int DOWN = 2;
+	public final int LEFT = 3;
 	protected boolean _alive = true;
 	protected boolean _moving = false;
 	public int _timeAfter = 80;

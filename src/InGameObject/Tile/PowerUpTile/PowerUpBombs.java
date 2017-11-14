@@ -1,9 +1,9 @@
 package InGameObject.Tile.PowerUpTile;
 
 import Client.Game;
-import InGameObject.TileAbstract;
-import InGameObject.Character.Player;
 import Graphics.Sprite;
+import InGameObject.Character.Player;
+import InGameObject.TileAbstract;
 
 public class PowerUpBombs extends PowerUpAbstract {
 
@@ -26,7 +26,7 @@ public class PowerUpBombs extends PowerUpAbstract {
 	@Override
 	public void setValues() {
 		_active = true;
-		Game.addBombRate(1);
+		Game.addPlayerBombRate(1);
 	}
 	
 

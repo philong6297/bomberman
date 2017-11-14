@@ -1,16 +1,14 @@
 package Client;
 
-import java.awt.Canvas;
-import java.awt.Graphics;
+import Exceptions.GameException;
+import GUI.Frame;
+import Graphics.Screen;
+import Input.Keyboard;
+
+import java.awt.*;
 import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferInt;
-
-
-import Exceptions.GameException;
-import Graphics.Screen;
-import GUI.Frame;
-import Input.Keyboard;
 
 public class Game extends Canvas {
 	
@@ -20,10 +18,10 @@ public class Game extends Canvas {
 	|--------------------------------------------------------------------------
 	 */
 	public static final double VERSION = 1.0;
-	
+
 	public static final int TILES_SIZE = 16,
-							WIDTH = TILES_SIZE * (int)(31 / 2), //minus one to ajust the window,
-							HEIGHT = 13 * TILES_SIZE;
+			WIDTH = TILES_SIZE * 31 / 2, //minus one to ajust the window,
+			HEIGHT = 13 * TILES_SIZE;
 
 	public static int SCALE = 3;
 	
@@ -36,14 +34,19 @@ public class Game extends Canvas {
 	
 	public static final int TIME = 200;
 	public static final int POINTS = 0;
-	public static final int LIVES = 3;
-	
+	public static final int LIVES = 999;
+
 	protected static int SCREENDELAY = 3;
 	
 	
 	//can be modified with bonus
-	protected static int bombRate = BOMBRATE;
+	protected static int playerBombRate = BOMBRATE;
+	protected static int botBombRate = BOMBRATE;
 	protected static int bombRadius = BOMBRADIUS;
+
+	public static int getBotBombRate() {
+		return botBombRate;
+	}
 	protected static double playerSpeed = PLAYERSPEED;
 	
 	
@@ -176,9 +179,9 @@ public class Game extends Canvas {
 	public static double getPlayerSpeed() {
 		return playerSpeed;
 	}
-	
-	public static int getBombRate() {
-		return bombRate;
+
+	public static int getPlayerBombRate() {
+		return playerBombRate;
 	}
 	
 	public static int getBombRadius() {
@@ -192,11 +195,15 @@ public class Game extends Canvas {
 	public static void addBombRadius(int i) {
 		bombRadius += i;
 	}
-	
-	public static void addBombRate(int i) {
-		bombRate += i;
+
+	public static void addPlayerBombRate(int i) {
+		playerBombRate += i;
 	}
-	
+
+	public static void addBotBombRate(int i) {
+		botBombRate += i;
+	}
+
 	//screen delay
 	public int getScreenDelay() {
 		return _screenDelay;

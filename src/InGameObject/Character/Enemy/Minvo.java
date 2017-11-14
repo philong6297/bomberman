@@ -3,18 +3,16 @@ package InGameObject.Character.Enemy;
 
 import Client.Board;
 import Client.Game;
-import InGameObject.Character.Enemy.AI.AIMedium;
 import Graphics.Sprite;
+import InGameObject.Character.Enemy.AI.AIHigh;
 
 public class Minvo extends EnemyAbstract {
-	
-	
+
 	public Minvo(int x, int y, Board board) {
-		super(x, y, board, Sprite.minvo_dead, Game.getPlayerSpeed() * 2, 800);
+		super(x, y, board, Sprite.minvo_dead, Game.getPlayerSpeed() * 0.5, 800);
 		
 		_sprite = Sprite.minvo_right1;
-		
-		_ai = new AIMedium(_board.getPlayer(), this);
+		_ai = new AIHigh(_board.getPlayer(), this, board.get_level().get_lineTiles());
 		_direction  = _ai.calculateDirection();
 	}
 	/*

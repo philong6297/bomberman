@@ -1,12 +1,13 @@
 package InGameObject.Character.Enemy.AI;
 
-import InGameObject.Character.Player;
 import InGameObject.Character.Enemy.EnemyAbstract;
+import InGameObject.Character.Player;
 
 public class AIMedium extends AIAbstract {
 	Player _player;
 	EnemyAbstract _e;
-	
+
+	//private boolean aiPlaceBomb;
 	public AIMedium(Player player, EnemyAbstract e) {
 		_player = player;
 		_e = e;
@@ -19,8 +20,8 @@ public class AIMedium extends AIAbstract {
 			return random.nextInt(4);
 		
 		int vertical = random.nextInt(2);
-		
-		if(vertical == 1) {
+
+		if (vertical == 1) {
 			int v = calculateRowDirection();
 			if(v != -1)
 				return v;

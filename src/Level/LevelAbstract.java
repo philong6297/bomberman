@@ -5,7 +5,22 @@ import Exceptions.InLoadLevelException;
 
 public abstract class LevelAbstract implements ILevel {
 
-	protected int _width, _height, _level;
+    protected int _width;
+    protected int _height;
+    protected int _level;
+
+    public int get_width() {
+        return _width;
+    }
+
+    public int get_height() {
+        return _height;
+    }
+
+    public String[] get_lineTiles() {
+        return _lineTiles;
+    }
+
 	protected String[] _lineTiles;
 	protected Board _board;
 

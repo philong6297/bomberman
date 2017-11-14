@@ -1,18 +1,18 @@
 package InGameObject.Character.Enemy;
 
-import java.awt.Color;
-
 import Client.Board;
 import Client.Game;
-import InGameObject.Character.CharacterAbstract;
-import InGameObject.TileAbstract;
-import InGameObject.Message;
-import InGameObject.Bomb.AroundBombExplosion;
-import InGameObject.Character.Player;
-import InGameObject.Character.Enemy.AI.AIAbstract;
 import Graphics.Screen;
 import Graphics.Sprite;
+import InGameObject.Bomb.AroundBombExplosion;
+import InGameObject.Character.CharacterAbstract;
+import InGameObject.Character.Enemy.AI.AIAbstract;
+import InGameObject.Character.Player;
+import InGameObject.Message;
+import InGameObject.TileAbstract;
 import Level.Coordinates;
+
+import java.awt.*;
 
 public abstract class EnemyAbstract extends CharacterAbstract {
 
@@ -75,9 +75,9 @@ public abstract class EnemyAbstract extends CharacterAbstract {
 			}
 				
 		}
-			
-		screen.renderEntity((int)_x, (int)_y - _sprite.SIZE, this);
-	}
+        //System.out.println("enemy"+getXTile() +"+" + getYTile());
+        screen.renderEntity((int) _x, (int) _y - _sprite.SIZE, this);
+    }
 	
 	/*
 	|--------------------------------------------------------------------------
@@ -91,10 +91,9 @@ public abstract class EnemyAbstract extends CharacterAbstract {
 			_direction = _ai.calculateDirection();
 			_steps = MAX_STEPS;
 		}
-			
-		if(_direction == 0) ya--; 
-		if(_direction == 2) ya++;
-		if(_direction == 3) xa--;
+        if (_direction == 0) ya--;
+        if (_direction == 2) ya++;
+        if(_direction == 3) xa--;
 		if(_direction == 1) xa++;
 		
 		if(canMove(xa, ya)) {

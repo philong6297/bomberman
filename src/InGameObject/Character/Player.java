@@ -1,22 +1,22 @@
 package InGameObject.Character;
 
-import java.awt.Color;
+import Client.Board;
+import Client.Game;
+import Graphics.Screen;
+import Graphics.Sprite;
+import InGameObject.Bomb.AroundBombExplosion;
+import InGameObject.Bomb.Bomb;
+import InGameObject.Character.Enemy.EnemyAbstract;
+import InGameObject.Message;
+import InGameObject.Tile.PowerUpTile.PowerUpAbstract;
+import InGameObject.TileAbstract;
+import Input.Keyboard;
+import Level.Coordinates;
+
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
-import Client.Board;
-import Client.Game;
-import InGameObject.TileAbstract;
-import InGameObject.Message;
-import InGameObject.Bomb.Bomb;
-import InGameObject.Bomb.AroundBombExplosion;
-import InGameObject.Character.Enemy.EnemyAbstract;
-import InGameObject.Tile.PowerUpTile.PowerUpAbstract;
-import Graphics.Screen;
-import Graphics.Sprite;
-import Input.Keyboard;
-import Level.Coordinates;
 
 public class Player extends CharacterAbstract {
 	
@@ -30,7 +30,7 @@ public class Player extends CharacterAbstract {
 	
 	public Player(int x, int y, Board board) {
 		super(x, y, board);
-		_bombs = _board.getBombs();
+		_bombs = _board.getPlayerBombs();
 		_input = _board.getInput();
 		_sprite = Sprite.player_right;
 	}
@@ -66,8 +66,8 @@ public class Player extends CharacterAbstract {
 			chooseSprite();
 		else
 			_sprite = Sprite.player_dead1;
-		
-		screen.renderEntity((int)_x, (int)_y - _sprite.SIZE, this);
+		//System.out.println("player"+getXTile() +"+" + getYTile());
+		screen.renderEntity((int) _x, (int) _y - _sprite.SIZE, this);
 	}
 	
 	public void calculateXOffset() {
@@ -82,21 +82,21 @@ public class Player extends CharacterAbstract {
 	|--------------------------------------------------------------------------
 	 */
 	private void detectPlaceBomb() {
-		if(_input.space && Game.getBombRate() > 0 && _timeBetweenPutBombs < 0) {
-			
+		if (_input.space && Game.getPlayerBombRate() > 0 && _timeBetweenPutBombs < 0) {
+
 			int xt = Coordinates.pixelToTile(_x + _sprite.getSize() / 2);
 			int yt = Coordinates.pixelToTile( (_y + _sprite.getSize() / 2) - _sprite.getSize() ); //subtract half player height and minus 1 y position
 			
 			placeBomb(xt,yt);
-			Game.addBombRate(-1);
-			
+			Game.addPlayerBombRate(-1);
+
 			_timeBetweenPutBombs = 30;
 		}
 	}
 	
 	protected void placeBomb(int x, int y) {
 		Bomb b = new Bomb(x, y, _board);
-		_board.addBomb(b);
+		_board.addPlayerBomb(b);
 	}
 	
 	private void clearBombs() {
@@ -107,7 +107,7 @@ public class Player extends CharacterAbstract {
 			b = bs.next();
 			if(b.isRemoved())  {
 				bs.remove();
-				Game.addBombRate(1);
+				Game.addPlayerBombRate(1);
 			}
 		}
 		
@@ -183,12 +183,12 @@ public class Player extends CharacterAbstract {
 
 	@Override
 	public void move(double xa, double ya) {
-		if(xa > 0) _direction = 1;
-		if(xa < 0) _direction = 3;
-		if(ya > 0) _direction = 2;
-		if(ya < 0) _direction = 0;
-		
-		if(canMove(0, ya)) { //separate the moves for the player can slide when is colliding
+		if (xa > 0) _direction = RIGHT;
+		if (xa < 0) _direction = LEFT;
+		if (ya > 0) _direction = DOWN;
+		if (ya < 0) _direction = UP;
+
+		if (canMove(0, ya)) { //separate the moves for the player can slide when is colliding
 			_y += ya;
 		}
 		
