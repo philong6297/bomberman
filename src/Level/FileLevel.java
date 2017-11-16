@@ -1,32 +1,25 @@
 package Level;
 
+import Client.Board;
+import Client.Game;
+import Exceptions.InLoadLevelException;
+import Graphics.Sprite;
+import InGameObject.Character.Enemy.*;
+import InGameObject.Character.Player;
+import InGameObject.LayeredTile;
+import InGameObject.Tile.DestroyableTile.BrickTile;
+import InGameObject.Tile.GrassTile;
+import InGameObject.Tile.PortalTile;
+import InGameObject.Tile.PowerUpTile.PowerUpBombs;
+import InGameObject.Tile.PowerUpTile.PowerUpFlames;
+import InGameObject.Tile.PowerUpTile.PowerUpSpeed;
+import InGameObject.Tile.WallTile;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.StringTokenizer;
-
-
-
-import Client.Board;
-import Client.Game;
-import InGameObject.LayeredTile;
-import InGameObject.Character.Player;
-import InGameObject.Character.Enemy.Balloom;
-import InGameObject.Character.Enemy.Doll;
-import InGameObject.Character.Enemy.Kondoria;
-import InGameObject.Character.Enemy.Minvo;
-import InGameObject.Character.Enemy.Oneal;
-import InGameObject.Tile.GrassTile;
-import InGameObject.Tile.PortalTile;
-import InGameObject.Tile.WallTile;
-import InGameObject.Tile.DestroyableTile.BrickTile;
-import InGameObject.Tile.PowerUpTile.PowerUpBombs;
-import InGameObject.Tile.PowerUpTile.PowerUpFlames;
-import InGameObject.Tile.PowerUpTile.PowerUpSpeed;
-import Exceptions.InLoadLevelException;
-import Graphics.Screen;
-import Graphics.Sprite;
 
 public class FileLevel extends LevelAbstract {
 	
@@ -126,7 +119,6 @@ public class FileLevel extends LevelAbstract {
 				break;
 			case 'p': 
 				_board.addMob( new Player(Coordinates.tileToPixel(x), Coordinates.tileToPixel(y) + Game.TILES_SIZE, _board) );
-				Screen.setOffset(0, 0);
 				
 				_board.addEntitie(pos, new GrassTile(x, y, Sprite.grass) );
 				break;

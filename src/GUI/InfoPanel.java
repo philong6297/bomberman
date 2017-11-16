@@ -1,13 +1,9 @@
 package GUI;
 
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.GridLayout;
-
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-
 import Client.Game;
+
+import javax.swing.*;
+import java.awt.*;
 
 public class InfoPanel extends JPanel {
 	
@@ -36,8 +32,8 @@ public class InfoPanel extends JPanel {
 		
 		
 		setBackground(Color.black);
-		setPreferredSize(new Dimension(0, 40));
-	}
+        setPreferredSize(new Dimension(0, 50));
+    }
 	
 	public void setTime(int t) {
 		timeLabel.setText("Time: " + t);

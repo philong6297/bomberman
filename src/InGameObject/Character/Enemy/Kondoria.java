@@ -3,8 +3,8 @@ package InGameObject.Character.Enemy;
 
 import Client.Board;
 import Client.Game;
-import InGameObject.Character.Enemy.AI.AIMedium;
 import Graphics.Sprite;
+import InGameObject.Character.Enemy.AI.AIMedium;
 
 public class Kondoria extends EnemyAbstract {
 	
@@ -15,8 +15,8 @@ public class Kondoria extends EnemyAbstract {
 		_sprite = Sprite.kondoria_right1;
 		
 		_ai = new AIMedium(_board.getPlayer(), this); //TODO: implement AIHigh 
-		_direction  = _ai.calculateDirection();
-	}
+        //_direction  = _ai.calculateDirection();
+    }
 	/*
 	|--------------------------------------------------------------------------
 	| CharacterAbstract Sprite

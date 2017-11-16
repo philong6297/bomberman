@@ -3,8 +3,8 @@ package InGameObject.Character.Enemy;
 
 import Client.Board;
 import Client.Game;
-import InGameObject.Character.Enemy.AI.AILow;
 import Graphics.Sprite;
+import InGameObject.Character.Enemy.AI.AILow;
 
 public class Doll extends EnemyAbstract {
 	
@@ -15,8 +15,8 @@ public class Doll extends EnemyAbstract {
 		_sprite = Sprite.doll_right1;
 		
 		_ai = new AILow();
-		_direction = _ai.calculateDirection();
-	}
+        //_direction = _ai.calculateDirection();
+    }
 	
 	/*
 	|--------------------------------------------------------------------------

@@ -1,37 +1,32 @@
 package GUI.Menu;
 
+import Client.Game;
+import GUI.Frame;
+
+import javax.swing.*;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
-
-import javax.swing.JLabel;
-import javax.swing.JMenu;
-import javax.swing.JMenuItem;
-import javax.swing.JSlider;
-import javax.swing.KeyStroke;
-import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
-
-import GUI.Frame;
-import Client.Game;
 
 public class OptionsMenu extends JMenu implements ChangeListener {
 
 	Frame _frame;
 	
 	public OptionsMenu(Frame frame) {
-		super("OptionsMenu");
-		
-		_frame = frame;
+        super("Options");
+
+        _frame = frame;
 		
 		JMenuItem pause = new JMenuItem("Pause");
-		pause.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_P, ActionEvent.CTRL_MASK));
-		pause.addActionListener(new MenuActionListener(frame));
+        pause.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_P, 0));
+        pause.addActionListener(new MenuActionListener(frame));
 		add(pause);
 		
 		JMenuItem resume = new JMenuItem("Resume");
-		resume.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_R, ActionEvent.CTRL_MASK));
-		resume.addActionListener(new MenuActionListener(frame));
+        resume.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_R, 0));
+        resume.addActionListener(new MenuActionListener(frame));
 		add(resume);
 		
 		addSeparator();
@@ -39,9 +34,9 @@ public class OptionsMenu extends JMenu implements ChangeListener {
 		add(new JLabel("Size: "));
 		
 		JSlider sizeRange = new JSlider(JSlider.HORIZONTAL,
-                1, 5, 3);
-		
-		//Turn on labels at major tick marks.
+                1, 9, 5);
+
+        //Turn on labels at major tick marks.
 		sizeRange.setMajorTickSpacing(2);
 		sizeRange.setMinorTickSpacing(1);
 		sizeRange.setPaintTicks(true);
@@ -56,9 +51,9 @@ public class OptionsMenu extends JMenu implements ChangeListener {
 	public void stateChanged(ChangeEvent e) {
 		JSlider source = (JSlider)e.getSource();
 	    if (!source.getValueIsAdjusting()) {
-	        int fps = (int)source.getValue();
-	        
-	        Game.SCALE = fps;
+            int fps = source.getValue();
+
+            Game.SCALE = fps;
 	        System.out.println( Game.SCALE);
 	        
 	        _frame._gamepane.changeSize();

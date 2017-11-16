@@ -1,9 +1,9 @@
 package InGameObject.Bomb;
 
 import Client.Board;
+import Graphics.Screen;
 import InGameObject.Character.CharacterAbstract;
 import InGameObject.TileAbstract;
-import Graphics.Screen;
 
 public class AroundBombExplosion extends TileAbstract {
 
@@ -32,9 +32,9 @@ public class AroundBombExplosion extends TileAbstract {
 		int x = (int)_x;
 		int y = (int)_y;
 		for (int i = 0; i < _explosions.length; i++) {
-			last = i == _explosions.length -1 ? true : false;
-			
-			switch (_direction) {
+            last = i == _explosions.length - 1;
+
+            switch (_direction) {
 				case 0: y--; break;
 				case 1: x++; break;
 				case 2: y++; break;

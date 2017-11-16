@@ -1,9 +1,9 @@
 package Graphics;
 
 public class Sprite {
-	
-	public final int SIZE;
-	private int _x, _y;
+
+    public final int SIZE = 16;
+    private int _x, _y;
 	public int[] _pixels;
 	protected int _realWidth;
 	protected int _realHeight;
@@ -177,8 +177,8 @@ public class Sprite {
 	public static Sprite powerup_flamepass = new Sprite(16, 6, 10, SpriteSource.tiles, 16, 16);
 	
 	public Sprite(int size, int x, int y, SpriteSource sheet, int rw, int rh) {
-		SIZE = size;
-		_pixels = new int[SIZE * SIZE];
+        //SIZE = size;
+        _pixels = new int[SIZE * SIZE];
 		_x = x * SIZE;
 		_y = y * SIZE;
 		_sheet = sheet;
@@ -188,8 +188,8 @@ public class Sprite {
 	}
 	
 	public Sprite(int size, int color) {
-		SIZE = size;
-		_pixels = new int[SIZE * SIZE];
+        //SIZE = size;
+        _pixels = new int[SIZE * SIZE];
 		setColor(color);
 	}
 	

@@ -1,12 +1,10 @@
 package GUI;
 
-import java.awt.BorderLayout;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-
 import Client.Game;
 import GUI.Menu.MenuBar;
+
+import javax.swing.*;
+import java.awt.*;
 
 public class Frame extends JFrame {
 	
@@ -31,12 +29,13 @@ public class Frame extends JFrame {
 		add(_containerpane);
 		
 		setResizable(false);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        //_containerpane.setVisible(true);
+        _gamepane.setFocusable(true);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		pack();
 		setLocationRelativeTo(null);
-		setVisible(true);	
-		
-		_game.start();
+        setVisible(true);
+        _game.start();
 	}
 	
 	/*

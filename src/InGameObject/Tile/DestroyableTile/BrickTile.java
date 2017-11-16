@@ -1,11 +1,11 @@
 package InGameObject.Tile.DestroyableTile;
 
 
-import InGameObject.TileAbstract;
-import InGameObject.Bomb.AroundBombExplosion;
-import InGameObject.Character.Enemy.Kondoria;
 import Graphics.Screen;
 import Graphics.Sprite;
+import InGameObject.Bomb.AroundBombExplosion;
+import InGameObject.Character.Enemy.Kondoria;
+import InGameObject.TileAbstract;
 import Level.Coordinates;
 
 public class BrickTile extends DestroyableTile {
@@ -38,12 +38,10 @@ public class BrickTile extends DestroyableTile {
 		
 		if(e instanceof AroundBombExplosion)
 			destroy();
-		
-		if(e instanceof Kondoria)
-			return true;
-			
-		return false;
-	}
-	
-	
+
+        return e instanceof Kondoria;
+
+    }
+
+
 }

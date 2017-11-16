@@ -1,23 +1,19 @@
 package GUI.Menu;
 
+import Client.Game;
+import GUI.Frame;
+import GUI.InfoDialog;
+
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 
-import javax.swing.JMenu;
-import javax.swing.JMenuItem;
-import javax.swing.JOptionPane;
-import javax.swing.KeyStroke;
-
-import GUI.Frame;
-import Client.Game;
-import GUI.InfoDialog;
-
 public class HelpMenu extends JMenu {
 
 	public HelpMenu(Frame frame)  {
-		super("HelpMenu");
-		
+        super("Help");
+
 		/*
 		 * How to play
 		 */
@@ -46,8 +42,8 @@ public class HelpMenu extends JMenu {
 		public void actionPerformed(ActionEvent e) {
 			  
 			  if(e.getActionCommand().equals("How to play")) {
-				  new InfoDialog(_frame, "How to Play", "Later", JOptionPane.QUESTION_MESSAGE);
-			  }
+                  new InfoDialog(_frame, "How to Play", "Later...", JOptionPane.QUESTION_MESSAGE);
+              }
 				  
 			  if(e.getActionCommand().equals("About")) {
 				  new InfoDialog(_frame, "About", "Version: " + Game.VERSION + "\n Author: \n ", JOptionPane.INFORMATION_MESSAGE);

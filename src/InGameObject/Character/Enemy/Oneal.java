@@ -3,8 +3,8 @@ package InGameObject.Character.Enemy;
 
 import Client.Board;
 import Client.Game;
-import InGameObject.Character.Enemy.AI.AIMedium;
 import Graphics.Sprite;
+import InGameObject.Character.Enemy.AI.AIMedium;
 
 public class Oneal extends EnemyAbstract {
 	
@@ -14,8 +14,8 @@ public class Oneal extends EnemyAbstract {
 		_sprite = Sprite.oneal_left1;
 		
 		_ai = new AIMedium(_board.getPlayer(), this);
-		_direction  = _ai.calculateDirection();
-	}
+        //_direction  = _ai.calculateDirection();
+    }
 	
 	/*
 	|--------------------------------------------------------------------------

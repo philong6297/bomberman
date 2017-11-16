@@ -23,6 +23,11 @@ import java.util.List;
 public class Board implements IRender {
 
     public int _width, _height;
+
+    public TileAbstract[] get_entities() {
+        return _entities;
+    }
+
     public TileAbstract[] _entities;
     public List<CharacterAbstract> _mobs = new ArrayList<CharacterAbstract>();
     protected List<Bomb> _playerBombs = new ArrayList<Bomb>();
@@ -76,17 +81,26 @@ public class Board implements IRender {
         if (_game.isPaused()) return;
 
         //only render the visible part of screen
+        /*
         int x0 = Screen.xOffset >> 4; //TileAbstract precision, -> left X
         int x1 = (Screen.xOffset + screen.getWidth() + Game.TILES_SIZE) / Game.TILES_SIZE; // -> right X
         int y0 = Screen.yOffset >> 4;
         int y1 = (Screen.yOffset + screen.getHeight()) / Game.TILES_SIZE; //render one TileAbstract plus to fix black margins
-
+        System.out.println("Tracing");
+        System.out.println("x0 = "+x0 + "width = " + screen.getWidth());
+        System.out.println("x1 = "+x1);
+        System.out.println("y0 = "+y0);
+        System.out.println("y1 = "+y1);
         for (int y = y0; y < y1; y++) {
             for (int x = x0; x < x1; x++) {
+                System.out.println(x+y*_level.getWidth());
                 _entities[x + y * _level.getWidth()].render(screen);
             }
         }
-
+        System.out.println("End");
+        */
+        for (TileAbstract i : _entities)
+            i.render(screen);
         renderBombs(screen);
         renderMobs(screen);
 
@@ -424,7 +438,7 @@ public class Board implements IRender {
 
             g.setFont(new Font("Arial", Font.PLAIN, m.getSize()));
             g.setColor(m.getColor());
-            g.drawString(m.getMessage(), (int) m.getX() - Screen.xOffset * Game.SCALE, (int) m.getY());
+            g.drawString(m.getMessage(), (int) m.getX(), (int) m.getY());
         }
     }
 

@@ -10,5 +10,5 @@ public abstract class AIAbstract {
     protected final int LEFT = 3;
     protected Random random = new Random();
 
-    public abstract int calculateDirection();
+    public abstract int calculateDirection(int start, int end);
 }

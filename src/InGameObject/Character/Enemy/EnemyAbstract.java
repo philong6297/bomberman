@@ -20,7 +20,6 @@ public abstract class EnemyAbstract extends CharacterAbstract {
 	
 	protected double _speed; //Speed should change on LevelAbstract transition
 	protected AIAbstract _ai;
-	
 	//necessary to correct move
 	protected final double MAX_STEPS;
 	protected final double rest;
@@ -34,14 +33,15 @@ public abstract class EnemyAbstract extends CharacterAbstract {
 		
 		_points = points;
 		_speed = speed;
-		
 		MAX_STEPS = Game.TILES_SIZE / _speed;
 		rest = (MAX_STEPS - (int) MAX_STEPS) / MAX_STEPS;
 		_steps = MAX_STEPS;
 		
 		_timeAfter = 20;
 		_deadSprite = dead;
-	}
+        _direction = -1;
+        //calculateMove();
+    }
 	
 	/*
 	|--------------------------------------------------------------------------
@@ -51,7 +51,6 @@ public abstract class EnemyAbstract extends CharacterAbstract {
 	@Override
 	public void update() {
 		animate();
-		
 		if(_alive == false) {
 			afterKill();
 			return;
@@ -88,8 +87,11 @@ public abstract class EnemyAbstract extends CharacterAbstract {
 	public void calculateMove() {
 		int xa = 0, ya = 0;
 		if(_steps <= 0){
-			_direction = _ai.calculateDirection();
-			_steps = MAX_STEPS;
+            int playerNode = _board.getPlayer().getYTile() * _board.getLevel().getWidth() + _board.getPlayer().getXTile();
+            int enemyNode = getYTile() * _board.getLevel().getWidth() + getXTile();
+            //System.out.println(enemyNode);
+            _direction = _ai.calculateDirection(enemyNode, playerNode);
+            _steps = MAX_STEPS;
 		}
         if (_direction == 0) ya--;
         if (_direction == 2) ya++;
