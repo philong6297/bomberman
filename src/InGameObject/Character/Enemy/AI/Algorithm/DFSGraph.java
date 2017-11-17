@@ -23,8 +23,8 @@ public class DFSGraph extends Graph {
             pathTo[i] = -1; // initialize pathTo in node i was visited right after nowhere!
         }
         stack.clear();
-        visitDFS(pathTo, start, end); // path finding from start to end and store to pathTo
-
+        visitDFSrecursive(start, end, pathTo); // path finding from start to end and store to pathTo
+        //visitDFS(pathTo,start,end);
 
         //get shortest path from startNode to endNode : start with pathTo[endNode]
         // and backtrack until reach startNode
@@ -40,6 +40,21 @@ public class DFSGraph extends Graph {
         return path;
     }
 
+    private boolean visitDFSrecursive(int start, int end, int pathTo[]) {
+        visitedSet.add(start);
+        if (start == end) return true;
+        Iterator<Integer> i = graphNode[start].iterator();
+        while (i.hasNext()) {
+            int w = i.next();
+            if (!visitedSet.contains(w))  //if node w is not visited
+            {
+                pathTo[w] = start; //record where w come from
+                if (visitDFSrecursive(w, end, pathTo))
+                    return true;
+            }
+        }
+        return false;
+    }
     private void visitDFS(int pathTo[], int startNode, int endNode) {
         stack.add(startNode);
         int prevMove = -1;
