@@ -23,10 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DijkstraGraph.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DijkstraGraph.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/DijkstraGraph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
+            <state relative-caret-position="-106">
               <caret line="31" column="41" lean-forward="false" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
               <folding />
             </state>
@@ -79,12 +79,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AIHigh.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AIHigh.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/AIHigh.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="152">
+              <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -538,7 +540,7 @@
       <workItem from="1510835887813" duration="13140000" />
       <workItem from="1510908918941" duration="6554000" />
       <workItem from="1510932257405" duration="448000" />
-      <workItem from="1510932744088" duration="232000" />
+      <workItem from="1510932744088" duration="890000" />
     </task>
     <task id="LOCAL-00001" summary="Update BFS and create class Graph data structure for future pathfinding algorithm">
       <created>1510659117594</created>
@@ -561,11 +563,18 @@
       <option name="project" value="LOCAL" />
       <updated>1510932833842</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Update Dijkstra">
+      <created>1510932989660</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1510932989660</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136580000" />
+    <option name="totallyTimeSpent" value="137238000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1380" height="735" extended-state="0" />
@@ -984,14 +993,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/AIHigh.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/DFSGraph.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
@@ -1032,9 +1033,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/DijkstraGraph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
+        <state relative-caret-position="-106">
           <caret line="31" column="41" lean-forward="false" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/AIHigh.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
