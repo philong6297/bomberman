@@ -9,14 +9,13 @@ import java.util.Stack;
 
 public class IDDFS extends PathFinding {
 
-
+    static Set<Node<Integer>> visitedSet = new LinkedHashSet<>();
     //Iterative deepening depth-first search
     @Override
     public Stack<Integer> pathFinding(Node<Integer> start, Node<Integer> end) {
         if (start == null || end == null)
             return null;
-        Set<Node<Integer>> visitedSet = new LinkedHashSet<>();
-        int depth = 0;
+        int depth = (int) start.distance(end);
         boolean goalFound = false;
         while (goalFound == false) {
             visitedSet.clear();
@@ -24,6 +23,7 @@ public class IDDFS extends PathFinding {
             end.cameFrom = null;
             goalFound = visitDLS(start, end, depth, visitedSet);
             depth++;
+            if (depth == 500) return null;
         }
         return ReconstructPath(start, end);
     }
@@ -43,6 +43,7 @@ public class IDDFS extends PathFinding {
                     w.cameFrom = src; //record where w come from
                     if (visitDLS(w, goal, maxDepth - 1, visitedSet))
                         return true;
+                    w.cameFrom = null;
                 }
             }
         }

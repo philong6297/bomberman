@@ -11,43 +11,40 @@ public class AStar extends PathFinding {
         if (start == null || end == null)
             return null;
         Set<Node> closedSet = new LinkedHashSet<>();
-        LinkedList<Node> openSet = new LinkedList<>();
+        PriorityQueue<Node> openSet = new PriorityQueue<>();
 
         start.gValue = 0;
-        start.hValue = start.distance(end);
+        start.hValue = start.chebyshevHeuristic(end);
         start.fValue = start.hValue + start.gValue;
 
         openSet.add(start);
         while (!openSet.isEmpty()) {
-            Node current = openSet.get(0);
+            Node current = openSet.peek();
             for (Node iNode : openSet) {
                 if (iNode.fValue < current.fValue)
                     current = iNode;
             }
-
+            if (current == end) {
+                return ReconstructPath(start, end);
+            }
             openSet.remove(current);
             closedSet.add(current);
 
-            if (current == end) {
-                openSet.clear();
-                closedSet.clear();
-                return ReconstructPath(start, end);
-            } else {
-                Iterator<Node> i = current.next.iterator();
-                while (i.hasNext()) {
-                    Node neighbor = i.next();
-                    if (closedSet.contains(neighbor)) continue;
-                    double tempCurrentGValue = current.gValue + current.distance(neighbor);
-                    if (!openSet.contains(neighbor) || tempCurrentGValue < neighbor.gValue) {
-                        neighbor.cameFrom = current;
-                        neighbor.gValue = tempCurrentGValue;
-                        neighbor.hValue = neighbor.distance(end);
-                        neighbor.fValue = neighbor.gValue + neighbor.hValue;
-                        if (!openSet.contains(neighbor))
-                            openSet.add(neighbor);
-                    }
+            Iterator<Node> i = current.next.iterator();
+            while (i.hasNext()) {
+                Node neighbor = i.next();
+                if (closedSet.contains(neighbor)) continue;
+                double tempCurrentGValue = current.gValue + current.distance(neighbor);
+                if (!openSet.contains(neighbor) || tempCurrentGValue < neighbor.gValue) {
+                    neighbor.cameFrom = current;
+                    neighbor.gValue = tempCurrentGValue;
+                    neighbor.hValue = neighbor.chebyshevHeuristic(end);
+                    neighbor.fValue = neighbor.gValue + neighbor.hValue;
+                    if (!openSet.contains(neighbor))
+                        openSet.add(neighbor);
                 }
             }
+
         }
         return null;
     }

@@ -99,7 +99,7 @@ public abstract class EnemyAbstract extends CharacterAbstract {
 				int bombX = (int)_board.getPlayerBombs().get(i).getY();
 				int bombNode = bombY*_board.getLevel().getWidth()+bombX;
 				int bombRadius = Game.getBombRadius();
-				if(Math.abs(_ai.getGraph().getGraphNode().get(bombNode).distance(_ai.getGraph().getGraphNode().get(enemyNode))) <= bombRadius)
+				if(Math.abs(_ai.getGraph().getGraphNode().get(bombNode).vector2dDistance(_ai.getGraph().getGraphNode().get(enemyNode))) <= bombRadius)
 				{
 
 				}

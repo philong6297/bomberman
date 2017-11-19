@@ -1,6 +1,6 @@
 package InGameObject.Character.Enemy.AI.Definitions;
 
-import InGameObject.Character.Enemy.AI.Algorithm.PathFinding.AStar;
+import InGameObject.Character.Enemy.AI.Algorithm.PathFinding.IDAStar;
 import InGameObject.Character.Enemy.AI.Algorithm.PathFinding.PathFinding;
 
 import java.util.ArrayList;
@@ -23,7 +23,8 @@ public class Graph {
         update(lineTiles, height, width);
         path = new Stack<>();
         //_pathFinding = new BDS(graphNodeClone);
-        _pathFinding = new AStar();
+        //_pathFinding = new AStar();
+        _pathFinding = new IDAStar();
         //_pathFinding = new BFS();
         //_pathFinding = new IDDFS();
         //_pathFinding = new DFS();
@@ -37,9 +38,9 @@ public class Graph {
         tiles = lineTiles;
         graphNodeClone.clear();
         graphNode.clear();
-        System.out.println("Graph update");
+        //System.out.println("Graph update");
         for (int i = 0; i < height; i++) {
-            System.out.println(lineTiles[i]);
+            //System.out.println(lineTiles[i]);
             for (int j = 0; j < width; j++) {
                 graphNode.add(new Node<>(new Vector2(j, i), i * width + j));
                 graphNodeClone.add(new Node<>(new Vector2(j, i), i * width + j));

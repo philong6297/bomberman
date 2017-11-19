@@ -1,32 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ecc741ee-5c17-4e78-a83c-b454ea2bf804" name="Default" comment="Re-design Algorithm.PathFinding package for design Strategy Pattern&#10;Update New Package Definitions for create Node, Graph and Vector2D structure">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/PathFinding/AStar.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/PathFinding/BDS.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/PathFinding/BFS.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/PathFinding/DFS.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/PathFinding/IDDFS.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/PathFinding/PathFinding.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Definitions/Node.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Definitions/Vector2.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/BFSGraph.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/BiDirectionalGraph.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/DFSGraph.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/DijkstraGraph.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/IDDFSGraph.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/Graph.java" afterPath="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Definitions/Graph.java" />
+    <list default="true" id="ecc741ee-5c17-4e78-a83c-b454ea2bf804" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/PathFinding/IDAStar.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/bomberman/Client/Board.class" afterPath="$PROJECT_DIR$/out/production/bomberman/Client/Board.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/bomberman/InGameObject/Character/Enemy/AI/AIAbstract.class" afterPath="$PROJECT_DIR$/out/production/bomberman/InGameObject/Character/Enemy/AI/AIAbstract.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/bomberman/InGameObject/Character/Enemy/EnemyAbstract.class" afterPath="$PROJECT_DIR$/out/production/bomberman/InGameObject/Character/Enemy/EnemyAbstract.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/bomberman/InGameObject/Character/Enemy/Minvo.class" afterPath="$PROJECT_DIR$/out/production/bomberman/InGameObject/Character/Enemy/Minvo.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/bomberman/res/levels/Level6.txt" afterPath="$PROJECT_DIR$/out/production/bomberman/res/levels/Level6.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Client/Board.java" afterPath="$PROJECT_DIR$/src/Client/Board.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/AIAbstract.java" afterPath="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/AIAbstract.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/AIHigh.java" afterPath="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/AIHigh.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/PathFinding/AStar.java" afterPath="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/PathFinding/AStar.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/PathFinding/IDDFS.java" afterPath="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/PathFinding/IDDFS.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Definitions/Graph.java" afterPath="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Definitions/Graph.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Definitions/Node.java" afterPath="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Definitions/Node.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Definitions/Vector2.java" afterPath="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Definitions/Vector2.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/InGameObject/Character/Enemy/EnemyAbstract.java" afterPath="$PROJECT_DIR$/src/InGameObject/Character/Enemy/EnemyAbstract.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/InGameObject/Character/Enemy/Minvo.java" afterPath="$PROJECT_DIR$/src/InGameObject/Character/Enemy/Minvo.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,20 +23,18 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/bomberman$Bomberman.coverage" NAME="Bomberman Coverage Results" MODIFIED="1510734666217" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/bomberman$Bomberman.coverage" NAME="Bomberman Coverage Results" MODIFIED="1511124691948" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Client.*</FILTER>
     </SUITE>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BDS.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/PathFinding/BDS.java">
+      <file leaf-file-name="AStar.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/PathFinding/AStar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="65" column="55" lean-forward="false" selection-start-line="65" selection-start-column="55" selection-end-line="65" selection-end-column="55" />
-              <folding>
-                <element signature="method#getIntersectingNode#0;class#BDS#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="221">
+              <caret line="40" column="66" lean-forward="false" selection-start-line="40" selection-start-column="66" selection-end-line="40" selection-end-column="66" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -58,32 +42,69 @@
       <file leaf-file-name="IDDFS.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/PathFinding/IDDFS.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="255">
+              <caret line="25" column="27" lean-forward="false" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Graph.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PathFinding.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/PathFinding/PathFinding.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Graph.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Definitions/Graph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+            <state relative-caret-position="128">
+              <caret line="25" column="8" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1078#1079#0" expanded="true" />
-                <element signature="e#1110#1111#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AIHigh.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/AIHigh.java">
+      <file leaf-file-name="IDAStar.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/PathFinding/IDAStar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="-127">
+              <caret line="16" column="48" lean-forward="false" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Node.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Definitions/Node.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="66" column="72" lean-forward="false" selection-start-line="66" selection-start-column="72" selection-end-line="66" selection-end-column="72" />
+              <folding>
+                <element signature="e#1220#1221#0" expanded="true" />
+                <element signature="e#1299#1300#0" expanded="true" />
+                <element signature="e#1348#1349#0" expanded="true" />
+                <element signature="e#1427#1428#0" expanded="true" />
+                <element signature="e#1476#1477#0" expanded="true" />
+                <element signature="e#1555#1556#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Vector2.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Definitions/Vector2.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="145">
+              <caret line="24" column="31" lean-forward="false" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -92,18 +113,8 @@
       <file leaf-file-name="EnemyAbstract.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/InGameObject/Character/Enemy/EnemyAbstract.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
+            <state relative-caret-position="315">
               <caret line="106" column="14" lean-forward="false" selection-start-line="106" selection-start-column="14" selection-end-line="106" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Minvo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/InGameObject/Character/Enemy/Minvo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -112,12 +123,9 @@
       <file leaf-file-name="Board.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Client/Board.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
+            <state relative-caret-position="315">
               <caret line="111" column="28" lean-forward="false" selection-start-line="111" selection-start-column="28" selection-end-line="111" selection-end-column="28" />
-              <folding>
-                <element signature="e#12105#12106#0" expanded="true" />
-                <element signature="e#12133#12134#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -125,24 +133,11 @@
       <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Client/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
+            <state relative-caret-position="391">
               <caret line="31" column="43" lean-forward="false" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
               <folding>
                 <element signature="e#4614#4615#0" expanded="true" />
                 <element signature="e#4638#4639#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AIAbstract.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/AIAbstract.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="22" column="29" lean-forward="false" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#634#635#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -172,7 +167,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Level/FileLevel.java" />
         <option value="$PROJECT_DIR$/src/InGameObject/Character/Player.java" />
         <option value="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/BiDirectionalBFS.java" />
         <option value="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/AILow.java" />
@@ -196,7 +190,6 @@
         <option value="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/BFSGraph.java" />
         <option value="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/DijkstraGraph.java" />
         <option value="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Utils/Vector2.java" />
-        <option value="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Definitions/Vector2.java" />
         <option value="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/Node.java" />
         <option value="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/Graph.java" />
         <option value="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/SearchAlgorithm/IDDFSGraph.java" />
@@ -209,20 +202,22 @@
         <option value="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/PathFinding/IDDFSGraph.java" />
         <option value="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/PathFinding/DijkstraGraph.java" />
         <option value="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/PathFinding/DijkstraPathFinding.java" />
-        <option value="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/PathFinding/AStar.java" />
         <option value="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/PathFinding/PathFinding.java" />
-        <option value="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Definitions/Node.java" />
         <option value="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/PathFinding/BDSPathFinding.java" />
-        <option value="$PROJECT_DIR$/out/production/bomberman/res/levels/Level6.txt" />
         <option value="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/AIHigh.java" />
         <option value="$PROJECT_DIR$/src/InGameObject/Character/Enemy/Minvo.java" />
-        <option value="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Definitions/Graph.java" />
         <option value="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/AIAbstract.java" />
         <option value="$PROJECT_DIR$/src/InGameObject/Character/Enemy/EnemyAbstract.java" />
         <option value="$PROJECT_DIR$/src/Client/Board.java" />
         <option value="$PROJECT_DIR$/src/Client/Game.java" />
         <option value="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/PathFinding/BDS.java" />
+        <option value="$PROJECT_DIR$/out/production/bomberman/res/levels/Level6.txt" />
         <option value="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/PathFinding/IDDFS.java" />
+        <option value="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Definitions/Vector2.java" />
+        <option value="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Definitions/Node.java" />
+        <option value="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/PathFinding/AStar.java" />
+        <option value="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Definitions/Graph.java" />
+        <option value="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/PathFinding/IDAStar.java" />
       </list>
     </option>
   </component>
@@ -255,7 +250,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -458,8 +455,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -634,7 +629,9 @@
       <workItem from="1511002929170" duration="43000" />
       <workItem from="1511016686047" duration="5450000" />
       <workItem from="1511055264748" duration="3223000" />
-      <workItem from="1511079017719" duration="25566000" />
+      <workItem from="1511079017719" duration="26649000" />
+      <workItem from="1511108590429" duration="104000" />
+      <workItem from="1511113360964" duration="10939000" />
     </task>
     <task id="LOCAL-00001" summary="Update BFS and create class Graph data structure for future pathfinding algorithm">
       <created>1510659117594</created>
@@ -671,11 +668,18 @@
       <option name="project" value="LOCAL" />
       <updated>1510933707259</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Re-design Algorithm.PathFinding package for design Strategy Pattern&#10;Update New Package Definitions for create Node, Graph and Vector2D structure">
+      <created>1511107292536</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1511107292536</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="181779000" />
+    <option name="totallyTimeSpent" value="193905000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1368" height="735" extended-state="0" />
@@ -683,32 +687,32 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.328" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280757" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36" sideWeight="0.5147929" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36" sideWeight="0.4852071" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329142" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1841716" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328" sideWeight="0.49704143" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3968" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3968" sideWeight="0.49704143" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329429" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -742,7 +746,7 @@
           <option name="timeStamp" value="98" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="99" />
+      <option name="time" value="100" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -756,13 +760,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/InGameObject/Character/Enemy/Balloom.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="17" column="10" lean-forward="false" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/InGameObject/Character/Enemy/Doll.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -915,10 +912,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1768">
           <caret line="133" column="37" lean-forward="false" selection-start-line="133" selection-start-column="37" selection-end-line="133" selection-end-column="37" />
-          <folding>
-            <element signature="e#4018#4019#0" expanded="false" />
-            <element signature="e#4065#4066#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -930,19 +923,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/Node.java" />
-    <entry file="file://$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Definitions/Vector2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/PathFinding/DFS.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="21" column="40" lean-forward="true" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -960,41 +944,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Definitions/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#499#500#0" expanded="true" />
-            <element signature="e#526#527#0" expanded="true" />
-            <element signature="e#553#554#0" expanded="true" />
-            <element signature="e#581#582#0" expanded="true" />
-            <element signature="e#618#619#0" expanded="false" />
-            <element signature="e#650#651#0" expanded="false" />
-            <element signature="e#683#684#0" expanded="false" />
-            <element signature="e#714#715#0" expanded="false" />
-            <element signature="e#747#748#0" expanded="false" />
-            <element signature="e#776#777#0" expanded="false" />
-            <element signature="e#809#810#0" expanded="false" />
-            <element signature="e#838#839#0" expanded="false" />
-            <element signature="e#871#872#0" expanded="false" />
-            <element signature="e#900#901#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/PathFinding/PathFinding.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1002,10 +951,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-          <folding>
-            <element signature="e#247#248#0" expanded="false" />
-            <element signature="e#328#329#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1013,7 +958,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="23" column="34" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1021,7 +965,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-68">
           <caret line="353" column="23" lean-forward="false" selection-start-line="353" selection-start-column="23" selection-end-line="353" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1029,12 +972,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="33" column="18" lean-forward="false" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
-          <folding>
-            <element signature="e#603#604#0" expanded="false" />
-            <element signature="e#619#620#0" expanded="false" />
-            <element signature="e#688#689#0" expanded="false" />
-            <element signature="e#780#781#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1042,17 +979,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="e#147#148#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/production/bomberman/res/levels/Level6.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="9" lean-forward="false" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1060,7 +986,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="91" column="92" lean-forward="false" selection-start-line="91" selection-start-column="79" selection-end-line="91" selection-end-column="92" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1068,7 +993,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="22" column="21" lean-forward="false" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1076,21 +1000,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="120" column="29" lean-forward="false" selection-start-line="120" selection-start-column="23" selection-end-line="120" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/PathFinding/AStar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-357">
-          <caret line="7" column="18" lean-forward="false" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/AIHigh.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
+        <state relative-caret-position="153">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
@@ -1098,45 +1013,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/InGameObject/Character/Enemy/Minvo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="238">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/AIAbstract.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
+        <state relative-caret-position="323">
           <caret line="22" column="29" lean-forward="false" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#634#635#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/InGameObject/Character/Enemy/EnemyAbstract.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="106" column="14" lean-forward="false" selection-start-line="106" selection-start-column="14" selection-end-line="106" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Client/Board.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="111" column="28" lean-forward="false" selection-start-line="111" selection-start-column="28" selection-end-line="111" selection-end-column="28" />
-          <folding>
-            <element signature="e#12105#12106#0" expanded="true" />
-            <element signature="e#12133#12134#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#634#635#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Client/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
+        <state relative-caret-position="391">
           <caret line="31" column="43" lean-forward="false" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
           <folding>
             <element signature="e#4614#4615#0" expanded="true" />
@@ -1147,7 +1043,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/PathFinding/BDS.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
+        <state relative-caret-position="799">
           <caret line="65" column="55" lean-forward="false" selection-start-line="65" selection-start-column="55" selection-end-line="65" selection-end-column="55" />
           <folding>
             <element signature="method#getIntersectingNode#0;class#BDS#0" expanded="false" />
@@ -1155,22 +1051,93 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/InGameObject/Character/Enemy/EnemyAbstract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="106" column="14" lean-forward="false" selection-start-line="106" selection-start-column="14" selection-end-line="106" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Client/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="111" column="28" lean-forward="false" selection-start-line="111" selection-start-column="28" selection-end-line="111" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/bomberman/res/levels/Level6.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/PathFinding/PathFinding.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/PathFinding/IDDFS.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state relative-caret-position="255">
+          <caret line="25" column="27" lean-forward="false" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Definitions/Vector2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="24" column="31" lean-forward="false" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Definitions/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="66" column="72" lean-forward="false" selection-start-line="66" selection-start-column="72" selection-end-line="66" selection-end-column="72" />
+          <folding>
+            <element signature="e#1220#1221#0" expanded="true" />
+            <element signature="e#1299#1300#0" expanded="true" />
+            <element signature="e#1348#1349#0" expanded="true" />
+            <element signature="e#1427#1428#0" expanded="true" />
+            <element signature="e#1476#1477#0" expanded="true" />
+            <element signature="e#1555#1556#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/PathFinding/AStar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="40" column="66" lean-forward="false" selection-start-line="40" selection-start-column="66" selection-end-line="40" selection-end-column="66" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Definitions/Graph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+        <state relative-caret-position="128">
+          <caret line="25" column="8" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1078#1079#0" expanded="true" />
-            <element signature="e#1110#1111#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/PathFinding/IDAStar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-127">
+          <caret line="16" column="48" lean-forward="false" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

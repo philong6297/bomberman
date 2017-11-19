@@ -3,14 +3,14 @@ package InGameObject.Character.Enemy.AI.Definitions;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
-public class Node<T> {
+public class Node<T> implements Comparable<Node> {
 
     public Vector2 _position;
     public Set<Node> next;
     public Node cameFrom = null;
-    public double gValue = 0;
+    public double gValue = Integer.MAX_VALUE;
     public double hValue = 0;
-    public double fValue = 0;
+    public double fValue = Integer.MAX_VALUE;
     protected T _data;
 
     public Node(Vector2 pos, T data) {
@@ -58,6 +58,23 @@ public class Node<T> {
     }
 
     public double distance(Node node) {
-        return Vector2.distance(this._position, node._position);
+        return Vector2.vector2dDistance(this._position, node._position);
+    }
+
+    public double manhattanHeuristic(Node node) {
+        return Vector2.manhattanDistance(this._position, node._position);
+    }
+
+    public double chebyshevHeuristic(Node node) {
+        return Vector2.chebyshevDistance(this._position, node._position);
+    }
+
+    @Override
+    public int compareTo(Node o) {
+        if (fValue < o.fValue)
+            return -1;
+        if (fValue > o.fValue)
+            return 1;
+        return 0;
     }
 }
