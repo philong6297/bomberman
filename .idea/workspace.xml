@@ -1,18 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ecc741ee-5c17-4e78-a83c-b454ea2bf804" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/PathFinding/IDAStar.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/bomberman/Client/Board.class" afterPath="$PROJECT_DIR$/out/production/bomberman/Client/Board.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/bomberman/InGameObject/Character/Enemy/AI/AIAbstract.class" afterPath="$PROJECT_DIR$/out/production/bomberman/InGameObject/Character/Enemy/AI/AIAbstract.class" />
+    <list default="true" id="ecc741ee-5c17-4e78-a83c-b454ea2bf804" name="Default" comment="Update IDAStar">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/bomberman/res/levels/Level6.txt" afterPath="$PROJECT_DIR$/out/production/bomberman/res/levels/Level6.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/PathFinding/AStar.java" afterPath="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/PathFinding/AStar.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/PathFinding/IDDFS.java" afterPath="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/PathFinding/IDDFS.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Definitions/Graph.java" afterPath="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Definitions/Graph.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Definitions/Node.java" afterPath="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Definitions/Node.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Definitions/Vector2.java" afterPath="$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Definitions/Vector2.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/InGameObject/Character/Enemy/EnemyAbstract.java" afterPath="$PROJECT_DIR$/src/InGameObject/Character/Enemy/EnemyAbstract.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,7 +33,7 @@
         <entry file="file://$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/PathFinding/IDDFS.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="25" column="27" lean-forward="false" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+              <caret line="25" column="28" lean-forward="false" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -63,7 +53,7 @@
         <entry file="file://$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Definitions/Graph.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="128">
-              <caret line="25" column="8" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+              <caret line="26" column="8" lean-forward="false" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -74,8 +64,8 @@
       <file leaf-file-name="IDAStar.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/PathFinding/IDAStar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-127">
-              <caret line="16" column="48" lean-forward="false" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+            <state relative-caret-position="-85">
+              <caret line="15" column="34" lean-forward="true" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -87,14 +77,14 @@
         <entry file="file://$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Definitions/Node.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
-              <caret line="66" column="72" lean-forward="false" selection-start-line="66" selection-start-column="72" selection-end-line="66" selection-end-column="72" />
+              <caret line="68" column="73" lean-forward="false" selection-start-line="68" selection-start-column="73" selection-end-line="68" selection-end-column="73" />
               <folding>
                 <element signature="e#1220#1221#0" expanded="true" />
                 <element signature="e#1299#1300#0" expanded="true" />
-                <element signature="e#1348#1349#0" expanded="true" />
-                <element signature="e#1427#1428#0" expanded="true" />
-                <element signature="e#1476#1477#0" expanded="true" />
-                <element signature="e#1555#1556#0" expanded="true" />
+                <element signature="e#1350#1351#0" expanded="true" />
+                <element signature="e#1430#1431#0" expanded="true" />
+                <element signature="e#1481#1482#0" expanded="true" />
+                <element signature="e#1561#1562#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -104,7 +94,7 @@
         <entry file="file://$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Definitions/Vector2.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="145">
-              <caret line="24" column="31" lean-forward="false" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+              <caret line="24" column="32" lean-forward="false" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -631,7 +621,7 @@
       <workItem from="1511055264748" duration="3223000" />
       <workItem from="1511079017719" duration="26649000" />
       <workItem from="1511108590429" duration="104000" />
-      <workItem from="1511113360964" duration="10939000" />
+      <workItem from="1511113360964" duration="11131000" />
     </task>
     <task id="LOCAL-00001" summary="Update BFS and create class Graph data structure for future pathfinding algorithm">
       <created>1510659117594</created>
@@ -675,11 +665,18 @@
       <option name="project" value="LOCAL" />
       <updated>1511107292536</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Update IDAStar">
+      <created>1511124786274</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1511124786278</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="193905000" />
+    <option name="totallyTimeSpent" value="194097000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1368" height="735" extended-state="0" />
@@ -695,7 +692,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36" sideWeight="0.4852071" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329142" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329142" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -731,7 +728,8 @@
     <MESSAGE value="Update Dijkstra" />
     <MESSAGE value="Update New Package Definitions for create Node, Graph and Vector2D structure&#10;Update Algorithm.PathFinding package for design Strategy Pattern" />
     <MESSAGE value="Re-design Algorithm.PathFinding package for design Strategy Pattern&#10;Update New Package Definitions for create Node, Graph and Vector2D structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="Re-design Algorithm.PathFinding package for design Strategy Pattern&#10;Update New Package Definitions for create Node, Graph and Vector2D structure" />
+    <MESSAGE value="Update IDAStar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update IDAStar" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1086,7 +1084,7 @@
     <entry file="file://$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/PathFinding/IDDFS.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="25" column="27" lean-forward="false" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+          <caret line="25" column="28" lean-forward="false" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -1094,7 +1092,7 @@
     <entry file="file://$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Definitions/Vector2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
-          <caret line="24" column="31" lean-forward="false" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+          <caret line="24" column="32" lean-forward="false" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -1102,14 +1100,14 @@
     <entry file="file://$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Definitions/Node.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="66" column="72" lean-forward="false" selection-start-line="66" selection-start-column="72" selection-end-line="66" selection-end-column="72" />
+          <caret line="68" column="73" lean-forward="false" selection-start-line="68" selection-start-column="73" selection-end-line="68" selection-end-column="73" />
           <folding>
             <element signature="e#1220#1221#0" expanded="true" />
             <element signature="e#1299#1300#0" expanded="true" />
-            <element signature="e#1348#1349#0" expanded="true" />
-            <element signature="e#1427#1428#0" expanded="true" />
-            <element signature="e#1476#1477#0" expanded="true" />
-            <element signature="e#1555#1556#0" expanded="true" />
+            <element signature="e#1350#1351#0" expanded="true" />
+            <element signature="e#1430#1431#0" expanded="true" />
+            <element signature="e#1481#1482#0" expanded="true" />
+            <element signature="e#1561#1562#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1125,7 +1123,7 @@
     <entry file="file://$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Definitions/Graph.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
-          <caret line="25" column="8" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+          <caret line="26" column="8" lean-forward="false" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1134,8 +1132,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/InGameObject/Character/Enemy/AI/Algorithm/PathFinding/IDAStar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-127">
-          <caret line="16" column="48" lean-forward="false" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+        <state relative-caret-position="-85">
+          <caret line="15" column="34" lean-forward="true" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
