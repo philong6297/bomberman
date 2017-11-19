@@ -50,14 +50,18 @@ public abstract class EnemyAbstract extends CharacterAbstract {
 	 */
 	@Override
 	public void update() {
+
 		animate();
+
 		if(_alive == false) {
 			afterKill();
 			return;
 		}
-		
+
 		if(_alive)
 			calculateMove();
+
+		_ai.updateGraph(_board.getTrackTiles());
 	}
 	
 	@Override
@@ -89,7 +93,19 @@ public abstract class EnemyAbstract extends CharacterAbstract {
 		if(_steps <= 0){
             int playerNode = _board.getPlayer().getYTile() * _board.getLevel().getWidth() + _board.getPlayer().getXTile();
             int enemyNode = getYTile() * _board.getLevel().getWidth() + getXTile();
-            //System.out.println(enemyNode);
+			/*
+			for(int i = 0;i<_board.getPlayerBombs().size();i++){
+				int bombY = (int)_board.getPlayerBombs().get(i).getX();
+				int bombX = (int)_board.getPlayerBombs().get(i).getY();
+				int bombNode = bombY*_board.getLevel().getWidth()+bombX;
+				int bombRadius = Game.getBombRadius();
+				if(Math.abs(_ai.getGraph().getGraphNode().get(bombNode).distance(_ai.getGraph().getGraphNode().get(enemyNode))) <= bombRadius)
+				{
+
+				}
+			}
+			*/
+			//System.out.println(enemyNode);
             _direction = _ai.calculateDirection(enemyNode, playerNode);
             _steps = MAX_STEPS;
 		}

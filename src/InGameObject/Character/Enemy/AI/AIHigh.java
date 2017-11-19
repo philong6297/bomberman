@@ -1,31 +1,27 @@
 package InGameObject.Character.Enemy.AI;
 
-import InGameObject.Character.Enemy.AI.Algorithm.DijkstraGraph;
-import InGameObject.Character.Enemy.AI.Algorithm.Graph;
+import InGameObject.Character.Enemy.AI.Definitions.Graph;
 
 import java.util.Stack;
 
 public class AIHigh extends AIAbstract {
-    protected Graph graph;
-    protected String[] _lineTiles;
-    private int height, width;
-    private int prevEnemyNode, prevPlayerNode;
-    private int add;
-    private Stack<Integer> locationPath;
+
 
     public AIHigh(String[] lineTiles) {
         _lineTiles = lineTiles;
         width = lineTiles[0].length();
         height = lineTiles.length;
         locationPath = new Stack<>();
-        graph = new DijkstraGraph(_lineTiles, height, width);
+        graph = new Graph(_lineTiles, height, width);
         prevEnemyNode = prevPlayerNode = -1;
         add = -1;
     }
-
     @Override
     public int calculateDirection(int enemyNode, int playerNode) {
         //if (prevPlayerNode == -1) return random.nextInt(4);
+        if (enemyNode == playerNode) return random.nextInt(4);
+
+        //only update when player move
         if (prevPlayerNode != playerNode) {
             /*
         if (_player == null)
@@ -34,13 +30,12 @@ public class AIHigh extends AIAbstract {
         }*/
             //update every single move
             System.out.println("update" + enemyNode + "-" + playerNode);
-            locationPath.clear();
             //int playerNode = _player.getYTile()*width+_player.getXTile();
             //int enemyNode = _e.getYTile()*width+_e.getXTile();
 
             locationPath = graph.getShortestPath(enemyNode, playerNode);
             System.out.println("Path");
-            if (locationPath.isEmpty()) System.out.println("Empty after update");
+            if (locationPath == null) System.out.println("Empty after update");
             else
                 for (int i = 0; i < locationPath.size(); i++) {
                     System.out.print(locationPath.get(i) + "-");
@@ -51,22 +46,22 @@ public class AIHigh extends AIAbstract {
         }
         prevEnemyNode = enemyNode;
         //if locationPath have no solution the bot should stay
-        if (locationPath.isEmpty()) {
+        if (locationPath == null) {
             System.out.println("no solution");
             return -1;
         }
+        /*
         if (enemyNode != locationPath.peek()) {
             System.out.println(enemyNode + "not yet to target" + locationPath.peek());
             return add;
         }
+        */
         System.out.println(enemyNode);
         //handling how to go to next location from path from currentLocation
+        if (locationPath.isEmpty()) return random.nextInt(4);
         int currentLocation = locationPath.pop();
+        if (locationPath.isEmpty()) return -1;
         //if enemy is touch player of course it will stay no more running
-        if (locationPath.isEmpty()) {
-            System.out.println("touched player");
-            return -1;
-        }
         if (currentLocation - locationPath.peek() >= width) add = UP;
         else if (currentLocation - locationPath.peek() >= 1) add = LEFT;
         else if (currentLocation - locationPath.peek() <= -width) add = DOWN;

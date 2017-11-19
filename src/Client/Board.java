@@ -32,6 +32,16 @@ public class Board implements IRender {
     public List<CharacterAbstract> _mobs = new ArrayList<CharacterAbstract>();
     protected List<Bomb> _playerBombs = new ArrayList<Bomb>();
     protected LevelAbstract _level;
+
+    protected String[] trackTiles;
+
+    public Board(Game game, Keyboard input, Screen screen) {
+        _game = game;
+        _input = input;
+        _screen = screen;
+        changeLevel(6); //start in LevelAbstract 5
+        trackTiles = _level.get_lineTiles();
+    }
     protected Game _game;
     protected Keyboard _input;
     protected Screen _screen;
@@ -42,12 +52,8 @@ public class Board implements IRender {
     private int _points = Game.POINTS;
     private int _lives = Game.LIVES;
 
-    public Board(Game game, Keyboard input, Screen screen) {
-        _game = game;
-        _input = input;
-        _screen = screen;
-
-        changeLevel(6); //start in LevelAbstract 5
+    public String[] getTrackTiles() {
+        return trackTiles;
     }
 
     public LevelAbstract get_level() {
@@ -66,6 +72,7 @@ public class Board implements IRender {
         updateEntities();
         updateMobs();
         updateBombs();
+        updateTrackTiles();
         updateMessages();
         detectEndGame();
 
@@ -75,6 +82,37 @@ public class Board implements IRender {
         }
     }
 
+    //update trackTiles
+    public void updateTrackTiles() {
+        trackTiles = _level.get_lineTiles().clone();
+        if (_playerBombs.isEmpty()) return;
+        int x, y;
+        StringBuilder sb;
+        for (int i = 0; i < _playerBombs.size(); i++) {
+            x = (int) _playerBombs.get(i).getX();
+            y = (int) _playerBombs.get(i).getY();
+            int bombRadius = Game.getBombRadius();
+            /*
+            for(int dy = -bombRadius;dy<=bombRadius;dy++)
+                if(y+dy > -1 && y+dy < trackTiles.length && trackTiles[y+dy].charAt(x) != '#'){
+                    sb = new StringBuilder(trackTiles[y+dy]);
+                    sb.setCharAt(x,'b');
+                    trackTiles[y+dy] = sb.toString();
+                }
+            sb = new StringBuilder(trackTiles[y]);
+            for(int dx = -bombRadius;dx<=bombRadius;dx++)
+                if(x+dx > -1 && x+dx < trackTiles[y].length() && trackTiles[y].charAt(x) != '#'){
+                    sb.setCharAt(x,'b');
+                }
+            trackTiles[y] = sb.toString();
+            */
+            if (trackTiles[y].charAt(x) != '#') {
+                sb = new StringBuilder(trackTiles[y]);
+                sb.setCharAt(x, 'b');
+                trackTiles[y] = sb.toString();
+            }
+        }
+    }
 
     @Override
     public void render(Screen screen) {
